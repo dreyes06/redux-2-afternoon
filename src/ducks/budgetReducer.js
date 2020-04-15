@@ -33,7 +33,7 @@ export function addPurchase(price, description, category){
 }
 
 export function removePurchase(id){
-    const removal = axios.delete('/api/budget-data/purchase/:id').then(res => res.data)
+    const removal = axios.delete(`/api/budget-data/purchase/${id}`).then(res => res.data)
 
     return {
         type: REMOVE_PURCHASE,
